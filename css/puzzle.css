@@ -1,0 +1,84 @@
+.puzzle-container{
+  width: 500px;
+  margin: auto;
+  position: relative;
+  background-image: url('../assets/backgrounds/background.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.puzzle-guide{
+  z-index: 1;
+}
+.complete-puzzle{
+  display: none;
+  z-index: 3;
+}
+.puzzle-piece{
+  position: absolute;
+  display: none;
+  z-index: 2;
+}
+.puzzle-piece#one{
+  display: flex;
+  width: 122px;
+  left: 5px;
+  top: 34px;
+}
+.puzzle-piece#two{
+  display: flex;
+  width: 150px;
+  left: 125px;
+  top: 0;
+}
+.puzzle-piece#three{
+  display: flex;
+  width: 105px;
+  left: 260px;
+  top: 4px;
+}
+.puzzle-piece#four{
+  display: flex;
+  width: 75px;
+  left: 350px;
+  top: 25px;
+}
+.puzzle-piece#five{
+  display: flex;
+  width: 80px;
+  left: 67px;
+  top: 105px;
+}
+.puzzle-piece#six{
+  display: flex;
+  width: 120px;
+  left: 140px;
+  top: 90px;
+}
+.puzzle-piece#fourteen{
+  display: flex;
+  width: 175px;
+  left: 243px;
+  top: 413px;
+}
+.puzzle-piece#fifteen{
+  display: flex;
+  width: 90px;
+  left: 397px;
+  top: 396px;
+}
+.puzzle-piece#sixteen{
+  display: flex;
+  width: 49px;
+  left: 105px;
+  top: 540px;
+}
+.puzzle-piece#seventeen{
+  display: flex;
+  width: 160px;
+  left: 257.48px;
+  top: 522px;
+}
+.spacer{
+  height: 50px;
+}
