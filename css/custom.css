@@ -74,3 +74,10 @@
   top: 0;
   transition: left 2s;
 }
+#myVideo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+}

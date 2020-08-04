@@ -38,4 +38,16 @@
       dragged = true;
     })
   })
+
+  let videoW = document.querySelector('#myVideos');
+  let closeB = document.querySelector('.close');
+
+  closeB.addEventListener('click', (e) => {
+    if(videoW.paused) {
+      return false;
+    } else {
+      videoW.pause();
+    }
+  })
+  
 })();
