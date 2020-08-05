@@ -42,12 +42,23 @@
   let videoW = document.querySelector('#myVideos');
   let closeB = document.querySelector('.close');
 
-  closeB.addEventListener('click', (e) => {
-    if(videoW.paused) {
-      return false;
-    } else {
-      videoW.pause();
-    }
+  if(closeB) {
+    closeB.addEventListener('click', (e) => {
+      if(videoW.paused) {
+        return false;
+      } else {
+        videoW.pause();
+      }
+    })
+  }
+
+  let menuBtn = document.querySelectorAll('.bringMenu');
+  let menu = document.querySelector('#Menu');
+
+  menuBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+      menu.style.left = menu.style.left == '-200px' ? '0' : '-200px';
+    });
   })
   
 })();

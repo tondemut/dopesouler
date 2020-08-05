@@ -5,12 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DopeSoul || Home</title>
 
+  <link rel="shortcut icon" href="./assets/img/heart.svg" type="image/x-icon">
+
   <link rel="stylesheet" href="./css/index.min.css">
   <link rel="stylesheet" href="./css/custom.css">
   <link rel="stylesheet" href="./css/puzzle.css">
 </head>
 <body>
-  
+  <div class="w-modal v2" id="mailingList">
+    <div class="modal-space xs">
+      <div class="modal-header no-border">
+        <div class="header-text s-txt-black"></div>
+        <div class="close s-txt-black">Close X</div>
+      </div>
+      <div class="modal-content">
+        <div class="w-container">
+          <div class="w-row">
+              <div class="w-col-md-12">
+                <h3 class="txt-center">Subscribe to our mailing list</h3>
+              <form role="form" class="w-form">
+                  <div class="form-group">
+                    <label for="name" class="sr-only">Name:</label>
+                    <input type="text" class="margin-bottom-2" id="name" name="name" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="sr-only">Email:</label>
+                    <input type="email" id="email" class="margin-bottom-2" name="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                  <button type="button" class="w-btn full s-bg-black s-txt-white">Subscribe</button>
+                  </div>
+              </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="main-body" style="background-image: url('./assets/img/shootedits-229.jpg');">
     <div class="w-container-flex bg-black main-div-home">
       <div class="w-row">
@@ -46,20 +77,20 @@
               
             </li>
             <li class="no-border no-padding">
-              <a href="./pages/home.html" class="w-btn no-border hov-item s-txt-white margin-left-5" for="about">ABOUT
+              <a href="./pages/about.html" class="w-btn no-border hov-item s-txt-white margin-left-5" for="about">ABOUT
                 <span><img id="about" src="./assets/img/heart.svg" alt="heart" class="w-img hov-img margin-left-2"></span>
               </a>
               
             </li>
             <li class="no-border no-padding">
-              <a href="#" class="w-btn no-border hov-item s-txt-white margin-left-5" for="contact">CONTACT
+              <a href="./pages/contact.html" class="w-btn no-border hov-item s-txt-white margin-left-5" for="contact">CONTACT
                 <span><img id="contact" src="./assets/img/heart.svg" alt="heart" class="w-img hov-img margin-left-2"></span>
               </a>
               
             </li>
             <li class="no-border no-padding">
-              <a href="#" class="w-btn no-border hov-item s-txt-white margin-left-5" for="mailingList">MAILING LIST
-                <span><img id="mailingList" src="./assets/img/heart.svg" alt="heart" class="w-img hov-img margin-left-2"></span>
+              <a href="#" class="w-btn no-border hov-item s-txt-white margin-left-5 modal-activator" for="mailingList">MAILING LIST
+                <span><img id="" src="./assets/img/heart.svg" alt="heart" class="w-img hov-img margin-left-2"></span>
               </a>
               
             </li>
@@ -81,6 +112,5 @@
   
   <script src="./js/index.min.js"></script>
   <script src="./js/custom.js"></script>
-  <script src="./js/puzzle.js"></script>
 </body>
 </html>

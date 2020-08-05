@@ -81,3 +81,9 @@
   width: 100%;
   min-height: 100%;
 }
+#Menu{
+  position: fixed;
+  left: -200px;
+  transition: left 1s;
+  z-index: 10;
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DopeSoul || Home</title>
+  <title>DopeSoul || Contact Us</title>
 
   <link rel="shortcut icon" href="../assets/img/heart.svg" type="image/x-icon">
 
@@ -14,24 +14,7 @@
 </head>
 <body>
   
-  <div class="main-body" style="background-color: black;">
-    <video autoplay muted id="myVideo" class="visible-lg-up">
-      <source src="../assets/videos/DOPE$OUL.mp4" type="video/mp4">
-    </video>
-    <img src="../assets/img/shootedits-251.jpg" class="visible-md-down" alt="nada" style="position: fixed; height: 100%; width: auto;">
-    <div class="w-modal v1 s-bg-black" id="normal_modal">
-      <div class="modal-header">
-        <div class="header-text txt-green-strong"></div>
-        <div class="close txt-cyan-strong" style="z-index: 3;"> CLOSE X</div>
-      </div>
-      <div class="modal-content">
-        <div class="image-space">
-          <video paused controls id="myVideos" style="width: 100%; height: 100%;" class="">
-            <source src="../assets/videos/DOPE$OUL.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+  <div class="main-body" style="background-image: url('../assets/img/shootedits-251.jpg');">
   
     <div class="w-container-flex c-bg-white main-div-vid no-padding">
       <div class="w-row w-nogutters">
@@ -70,15 +53,23 @@
         </div>
       </div>
       <div class="w-row">
-        <div class="w-col-md-12 txt-center">
-          <button class="w-btn full no-border modal-activator s-txt-black" for="normal_modal">Play Video</button>
+        <div class="w-col-md-12">
+          <nav class="w-nav justify-center the-nav no-shadow no-bg padding-right-3">
+            <div class="nav-brand">
+              <button class="nav-toggle padding-bottom-5 bringMenu">
+                <div></div>
+                <div></div>
+                <div></div>
+              </button>
+            </div>
+          </nav>
         </div>
       </div>
       <div class="w-row">
-        <div class="w-col-md-2">
+        <div class="w-col-md-2 w-col-auto">
           <div class="spacer visible-md-up"></div>
           <div class="spacer"></div>
-          <ul class="w-block-list no-border">
+          <ul class="w-block-list no-border s-bg-white" id="Menu">
             <li class="no-border">
               <a href="https://store.dope-soul.net/" class="w-btn no-border s-txt-black">
                 SHOP
@@ -88,7 +79,7 @@
               <a href="#" class="w-btn no-border look-book-menu-btn s-txt-black">
                 LOOKBOOKS
               </a>
-              <ul class="w-block-list no-border look-book-menu">
+              <ul class="w-block-list s-bg-white no-border look-book-menu">
                 <li class="no-border">
                   <a href="./lookbooks.html" class="w-btn no-border s-txt-black">
                     DS <br> DOPESOUL <br> LUX
@@ -102,17 +93,45 @@
               </ul>
             </li>
             <li class="no-border">
-              <a href="./about.html" class="w-btn no-border s-txt-black">
+              <a href="#" class="w-btn no-border s-txt-black">
                 ABOUT
               </a>
             </li>
             <li class="no-border">
-              <a href="./contact.html" class="w-btn no-border s-txt-black">
+              <a href="#" class="w-btn no-border s-txt-black">
                 CONTACT
               </a>
             </li>
             <li class="txt-xl s-txt-black"><a href="#" class="w-btn no-border"><i class="fab fa-instagram"></i></a></li>
           </ul>
+        </div>
+        <div class="w-col-md-6 w-push-md-1 w-col-12 padding-right-5">
+          <div class="spacer visible-md-up"></div>
+          <div class="w-card w-jumbotron c-bg-white c-shadow-black">
+            <div class="w-container">
+              <div class="w-row">
+                <div class="w-col-lg-6 w-push-lg-3">
+                  <h3 class="txt-center">Subscribe to our mailing list</h3>
+                  <form role="form" class="w-form">
+                    <div class="form-group">
+                      <label for="name" class="sr-only">Name:</label>
+                      <input type="text" class="margin-bottom-2" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="sr-only">Email:</label>
+                      <input type="email" id="email" class="margin-bottom-2" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                    <button type="button" class="w-btn full s-bg-black s-txt-white">Send <span><i class="far fa-paper-plane"></i></span></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
         </div>
       </div>
     </div>
