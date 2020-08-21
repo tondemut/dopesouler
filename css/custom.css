@@ -42,13 +42,14 @@
   left: 75%;
   opacity: 0;
   transition: opacity 2s;
+  z-index: 5001;
 }
 .look-book-opt{
   position: absolute;
   opacity: 0;
   display: none;
   transition: opacity 2s;
-  z-index: 200;
+  z-index: 5001;
 }
 .look-book-menu-btn:focus ~ .look-book-menu,
 .look-book-menu-btn:focus ~ .look-book-opt{
@@ -58,21 +59,43 @@
 .img-scroller{
   overflow: hidden;
   position: relative;
+  height: 100%;
 }
 .img-block{
   position: relative;
-  height: 487px;
+  height: 100%;
   display: block;
   overflow-x: hidden;
   overflow-y: hidden;
+  transition: top 2s;
+  transition-timing-function: ease-out;
 }
 .img-holder{
   display: inline-block;
-  width: 325px;
   position: absolute;
+  height: 100%;
   margin: 0 0 0 10px;
   top: 0;
   transition: left 2s;
+}
+.img-holder .menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.img-holder.to-the-store{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 300px;
+}
+.img-holder img{
+  height: 100%;
+  width: auto;
 }
 #myVideo {
   position: fixed;
@@ -86,4 +109,19 @@
   left: -200px;
   transition: left 1s;
   z-index: 10;
+}
+#canvas{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#header{
+  height: 20%;
+}
+#slider{
+  height: 60%;
+}
+#footer{
+  height: 20%;
 }

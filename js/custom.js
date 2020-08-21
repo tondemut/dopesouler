@@ -1,7 +1,61 @@
 (() => {
+  let Storage = window.sessionStorage;
   let imgH = document.querySelectorAll('.img-holder');
-  imgH.forEach((img, key) => {
-    img.style.left = `${key > 0 ? key * 325 : 0}px`;
+  let imgBlocks = document.querySelectorAll('.img-block');
+  let firstImg = document.querySelector('.img-holder img');
+  let navigatorsTo = [
+    ".to-hoodies *",
+    ".to-sweaters *",
+    ".to-shirts *",
+    ".to-pants *"
+  ];
+  let toList = ['hoodies','sweaters','shirts','pants'];
+  let navigatorsFrom = [
+    ".from-hoodies",
+    ".from-sweaters",
+    ".from-shirts",
+    ".from-pants"
+  ];
+  let fromList = ['hoodies','sweaters','shirts','pants'];
+  navigatorsTo.forEach((nav, index) => {
+    let lento = document.querySelector(nav);
+    lento.addEventListener('click', e => {
+      console.log('clicked' + lento.innerHTML);
+      let el = document.querySelector(`#${toList[index]}`);
+      console.log(toList[index]);
+      el.style.top = `-${index !== 0 ? h * (index + 1) : h}px`;
+
+      console.log(lento.parentElement.parentElement.parentElement.parentElement);
+    })
+  })
+  navigatorsFrom.forEach((nav, index) => {
+    let lento = document.querySelector(nav);
+    lento.addEventListener('click', e => {
+      console.log('clicked' + lento.innerHTML);
+      let el = document.querySelector(`#${fromList[index]}`);
+      console.log(fromList[index]);
+      el.style.top = `${index !== 0 ? h * (index + 1) : h}px`;
+
+      console.log(lento.parentElement.parentElement.parentElement.parentElement);
+    })
+  })
+
+  let widthImg = firstImg.offsetWidth;
+  let heightImg = imgBlocks[0].offsetHeight;
+  widthImg !== 0 ? Storage.setItem('imgWidth', `${widthImg}`) : console.log('value is zero width');
+  heightImg !== 0 ? Storage.setItem('imgHeight', `${heightImg}`) : console.log('value is zero height');
+
+  console.log(Storage.getItem('imgWidth'));
+  let w = Number(Storage.getItem('imgWidth'));
+  let h = Number(Storage.getItem('imgHeight'));
+
+  imgBlocks.forEach(block => {
+    let imageHs = block.querySelectorAll('.img-holder');
+
+    imageHs.forEach((img, key) => {
+  
+      img.style.left = `${key > 0 ? key * w : 0}px`;
+    })
   })
 
   let imgBlock = document.querySelectorAll('.img-holder');
@@ -18,7 +72,7 @@
         let mouseDiff = xmove - e.clientX;
         imgH.forEach((img) => {
         let init = Number(img.style.left.replace('px', ''));
-        img.style.left = `${mouseDiff > 0 ? init - 325 : init + 325}px`;
+        img.style.left = `${mouseDiff > 0 ? init - w : init + w}px`;
       })
       }
       dragged = true;
@@ -32,7 +86,7 @@
         let mouseDiff = xmove - e.touches[0].clientX;
         imgH.forEach((img) => {
         let init = Number(img.style.left.replace('px', ''));
-        img.style.left = `${mouseDiff > 0 ? init - 325 : init + 325}px`;
+        img.style.left = `${mouseDiff > 0 ? init - w : init + w}px`;
       })
       }
       dragged = true;
