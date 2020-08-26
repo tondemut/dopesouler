@@ -49,14 +49,10 @@
           <div class="spacer visible-lg-up"></div>
           <div class="spacer visible-lg-up"></div>
           <div class="spacer visible-lg-up"></div>
-          <div class="spacer visible-lg-up"></div>
-          <div class="spacer visible-lg-up"></div>
           <div class="spacer"></div>
           <button class="w-btn no-border full s-txt-white">CLICK TO PLAY SOUND</button>
         </div>
         <div class="w-col-lg-4">
-          <div class="spacer visible-lg-up"></div>
-          <div class="spacer visible-lg-up"></div>
           <div class="spacer visible-lg-up"></div>
           <div class="spacer visible-lg-up"></div>
           <div class="spacer"></div>
@@ -98,12 +94,40 @@
         </div>
         <div class="w-col-lg-4">
           <div class="spacer visible-lg-up"></div>
-          <div class="spacer visible-lg-up"></div>
-          <div class="spacer visible-lg-up"></div>
           <div class="spacer"></div>
-          <button class="w-btn no-border txt-center s-txt-white full">
+          <button class="w-btn no-border txt-center s-txt-white full" id="revealPieces">
             CLICK HERE <br /> FOR PIECES TO APPEAR
           </button>
+          <div class="puzzle-container">
+            <img src="./assets/img/whole.png" alt="complete" class="w-img complete-puzzle">
+            <div class="puzzle-piece" id="one" draggable="true">
+              <img src="./assets/pieces/1.png" alt="one">
+            </div>
+            <div class="puzzle-piece" id="two" draggable="true">
+              <img src="./assets/pieces/2.png" alt="two">
+            </div>
+            <div class="puzzle-piece" id="three" draggable="true">
+              <img src="./assets/pieces/3.png" alt="three">
+            </div>
+            <div class="puzzle-piece" id="four" draggable="true">
+              <img src="./assets/pieces/4.png" alt="four">
+            </div>
+            <div class="puzzle-piece" id="five" draggable="true">
+              <img src="./assets/pieces/5.png" alt="five">
+            </div>
+            <div class="puzzle-piece" id="six" draggable="true">
+              <img src="./assets/pieces/6.png" alt="six">
+            </div>
+            <div class="puzzle-piece" id="seven" draggable="true">
+              <img src="./assets/pieces/7.png" alt="seven">
+            </div>
+            <div class="puzzle-piece" id="eight" draggable="true">
+              <img src="./assets/pieces/8.png" alt="eight">
+            </div>
+            <div class="puzzle-piece" id="nine" draggable="true">
+              <img src="./assets/pieces/9.png" alt="nine">
+            </div>
+          </div>
           <h5 class="txt-center s-txt-white">COMPLETE THE PUZZLE</h5>
         </div>
       </div>
@@ -112,5 +136,6 @@
   
   <script src="./js/index.min.js"></script>
   <script src="./js/custom.js"></script>
+  <script src="./js/puzzle.js"></script>
 </body>
 </html>

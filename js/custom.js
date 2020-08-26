@@ -19,28 +19,33 @@
   let fromList = ['hoodies','sweaters','shirts','pants'];
   navigatorsTo.forEach((nav, index) => {
     let lento = document.querySelector(nav);
-    lento.addEventListener('click', e => {
-      console.log('clicked' + lento.innerHTML);
-      let el = document.querySelector(`#${toList[index]}`);
-      console.log(toList[index]);
-      el.style.top = `-${index !== 0 ? h * (index + 1) : h}px`;
-
-      console.log(lento.parentElement.parentElement.parentElement.parentElement);
-    })
+    if(lento) {
+      lento.addEventListener('click', e => {
+        console.log('clicked' + lento.innerHTML);
+        let el = document.querySelector(`#${toList[index]}`);
+        console.log(toList[index]);
+        el.style.top = `-${index !== 0 ? h * (index + 1) : h}px`;
+  
+        console.log(lento.parentElement.parentElement.parentElement.parentElement);
+      })
+    }
   })
   navigatorsFrom.forEach((nav, index) => {
     let lento = document.querySelector(nav);
-    lento.addEventListener('click', e => {
-      console.log('clicked' + lento.innerHTML);
-      let el = document.querySelector(`#${fromList[index]}`);
-      console.log(fromList[index]);
-      el.style.top = `${index !== 0 ? h * (index + 1) : h}px`;
-
-      console.log(lento.parentElement.parentElement.parentElement.parentElement);
-    })
+    if(lento) {
+      lento.addEventListener('click', e => {
+        console.log('clicked' + lento.innerHTML);
+        let el = document.querySelector(`#${fromList[index]}`);
+        console.log(fromList[index]);
+        el.style.top = `${index !== 0 ? h * (index + 1) : h}px`;
+  
+        console.log(lento.parentElement.parentElement.parentElement.parentElement);
+      })
+    }
   })
 
-  let widthImg = firstImg.offsetWidth;
+  if(imgBlocks && firstImg) {
+    let widthImg = firstImg.offsetWidth;
   let heightImg = imgBlocks[0].offsetHeight;
   widthImg !== 0 ? Storage.setItem('imgWidth', `${widthImg}`) : console.log('value is zero width');
   heightImg !== 0 ? Storage.setItem('imgHeight', `${heightImg}`) : console.log('value is zero height');
@@ -92,6 +97,7 @@
       dragged = true;
     })
   })
+  }
 
   let videoW = document.querySelector('#myVideos');
   let closeB = document.querySelector('.close');
