@@ -114,10 +114,19 @@
 
   let menuBtn = document.querySelectorAll('.bringMenu');
   let menu = document.querySelector('#Menu');
+  let isfirst = true;
 
   menuBtn.forEach(btn => {
     btn.addEventListener('click', e => {
-      menu.style.left = menu.style.left == '-200px' ? '0' : '-200px';
+      if(isfirst) {
+        menu.style.left = '0px';
+
+        isfirst = false;
+      } else {
+        menu.style.left = '-200px';
+
+        isfirst = true;
+      }
     });
   })
   

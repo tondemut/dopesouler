@@ -13,6 +13,16 @@
   background-position: center;
   overflow: hidden;
 }
+.about-body{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .main-div-home{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.788);
@@ -20,7 +30,7 @@
 }
 .main-div-vid{
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.767);
+  
 }
 .logo-head{
   width: 70px;
@@ -96,6 +106,20 @@
 .img-holder img{
   height: 100%;
   width: auto;
+}
+@keyframes wiggle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .2;
+  }
+}
+.play-vid{
+  animation-name: wiggle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 #myVideo {
   position: fixed;

@@ -236,7 +236,7 @@ function confirmPiece(pieceName) {
       if(completePieces.length == 9) {
         pieces.forEach(piece => {
           piece.style.display = 'none';
-          completePuzzle.style.display = 'block';
+          completePuzzle.style.display = 'block'; 
         })
       }
     } else {
