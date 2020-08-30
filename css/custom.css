@@ -13,7 +13,8 @@
   background-position: center;
   overflow: hidden;
 }
-.about-body{
+.about-body,
+.contact-body{
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,7 +31,6 @@
 }
 .main-div-vid{
   height: 100%;
-  
 }
 .logo-head{
   width: 70px;
