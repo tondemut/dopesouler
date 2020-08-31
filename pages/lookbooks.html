@@ -11,7 +11,26 @@
   <script src="https://kit.fontawesome.com/6b8e752b08.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
+  <div class="w-modal v2" id="menuL">
+    <div class="modal-space xs">
+      <div class="modal-header">
+        <div class="header-text"></div>
+        <div class="close">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="modal-content no-padding">
+        <ul class="w-block-list txt-center no-border">
+          <li class="no-border"><a href="./about.html" class="w-btn no-border s-txt-black">ABOUT</a></li>
+          <li class="no-border"><a href="./contact.html" class="w-btn no-border s-txt-black">CONTACT</a></li>
+          <li class="no-border"><a href="#" class="w-btn no-border s-txt-black">SHIPPING & RETURNS</a></li>
+          <li class="no-border"><a href="#" class="w-btn no-border s-txt-black">ACCESSIBILITY</a></li>
+          <li class="no-border"><a href="#" class="w-btn no-border s-txt-black">STOCKISTS</a></li>
+          <li class="no-border"><a href="http://instagram.com/dopesoul.co" class="w-btn no-border s-txt-black">SOCIAL</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <div id="canvas" class="">
     <div id="header" class="s-bg-white">
       <div class="w-container-flex bg-white main-div no-padding">
@@ -62,6 +81,16 @@
       </div>
     </div>
     <div id="slider" class="">
+      <div class="auto-scroll left">
+        <button class="w-btn no-border">
+          <i class="fas fa-angle-double-left fa-7x"></i>
+        </button>
+      </div>
+      <div class="auto-scroll right">
+        <button class="w-btn no-border">
+          <i class="fas fa-angle-double-right fa-7x"></i>
+        </button>
+      </div>
       <div class="img-scroller w-card">
         <div class="img-block s-bg-white" id="overview" style="z-index: 1000;">
         <div class="img-holder" draggable="true" style="height: 100%; width: 300px;">
@@ -91,8 +120,8 @@
         <div class="img-holder" draggable="true">
           <img src="../assets/img/shootedits-8.jpg" alt="" width="200" class="w-img">
         </div>
-        <div class="img-holder to-the-store" draggable="true" style="height: 100%; text-align: left;">
-          <a href="#" class="w-btn no-border txt-white">Take Me To The Store</a>
+        <div class="img-holder t-bg-black to-the-store" draggable="true" style="height: 100%; text-align: left;">
+          <a href="https://store.dope-soul.net/collections/all" class="w-btn no-border txt-white">Take Me To The Store</a>
         </div>
         </div>
         <div class="img-block s-bg-white" id="hoodies" style="z-index: 2000;">
@@ -126,8 +155,8 @@
           <div class="img-holder" draggable="true">
             <img src="../assets/img/sliders/hoodie2.jpg" alt="" width="200" class="w-img">
           </div>    
-          <div class="img-holder to-the-store" draggable="true" style="height: 100%; text-align: left;">
-            <a href="#" class="w-btn no-border txt-white">Take Me To The Store</a>
+          <div class="img-holder t-bg-black  to-the-store" draggable="true" style="height: 100%; text-align: left;">
+            <a href="https://store.dope-soul.net/collections/all" class="w-btn no-border txt-white">Take Me To The Store</a>
           </div>
           </div>
           <div class="img-block s-bg-white" id="sweaters" style="z-index: 3000;">
@@ -161,8 +190,8 @@
             <div class="img-holder" draggable="true">
               <img src="../assets/img/sliders/sweaters3.jpg" alt="" width="200" class="w-img">
             </div>
-            <div class="img-holder to-the-store" draggable="true" style="height: 100%; text-align: left;">
-              <a href="#" class="w-btn no-border txt-white">Take Me To The Store</a>
+            <div class="img-holder t-bg-black  to-the-store" draggable="true" style="height: 100%; text-align: left;">
+              <a href="https://store.dope-soul.net/collections/all" class="w-btn no-border txt-white">Take Me To The Store</a>
             </div>
             </div>
             <div class="img-block s-bg-white" id="shirts" style="z-index: 4000;">
@@ -196,8 +225,8 @@
               <div class="img-holder" draggable="true">
                 <img src="../assets/img/sliders/shirts1.jpg" alt="" width="200" class="w-img">
               </div>
-              <div class="img-holder to-the-store" draggable="true" style="height: 100%; text-align: left;">
-                <a href="#" class="w-btn no-border txt-white">Take Me To The Store</a>
+              <div class="img-holder t-bg-black  to-the-store" draggable="true" style="height: 100%; text-align: left;">
+                <a href="https://store.dope-soul.net/collections/all" class="w-btn no-border txt-white">Take Me To The Store</a>
               </div>
               </div>
               <div class="img-block s-bg-white" id="pants" style="z-index: 5000;">
@@ -229,16 +258,26 @@
                 <div class="img-holder" draggable="true">
                   <img src="../assets/img/sliders/pants2.jpg" alt="" width="200" class="w-img">
                 </div>
-                <div class="img-holder to-the-store" draggable="true" style="height: 100%; text-align: left;">
-                  <a href="#" class="w-btn no-border txt-white">Take Me To The Store</a>
+                <div class="img-holder t-bg-black  to-the-store" draggable="true" style="height: 100%; text-align: left;">
+                  <a href="https://store.dope-soul.net/collections/all" class="w-btn no-border s-txt-white">Take Me To The Store</a>
                 </div>
                 </div>
         </div>
     </div>
-    <div id="footer" class="s-bg-white"></div>
+    <div id="footer" class="s-bg-white">
+      <div class="w-container">
+        <div class="w-row">
+          <div class="w-col-12">
+            <div class="txt-center padding-5">
+              <button class="w-btn s-txt-white s-bg-black modal-activator" for="menuL">MENU &nbsp; <span><i class="fas fa-bars"></i></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   
   <script src="../js/index.min.js"></script>
-  <script src="../js/custom.js"></script>
+  <script src="../js/lookbook.js"></script>
 </body>
 </html>
