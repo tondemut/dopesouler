@@ -136,20 +136,48 @@
   var offset = [0,0];
   var div;
   var isDown = false;
+  let puzzleMode = false;
 
+  let puzzleSect = document.querySelector('.puzzle-ting');
+  let secondSect = document.querySelector('.second');
+  let mainBod = document.querySelector('.main-div-home');
   let pieces = document.querySelectorAll('.puzzle-piece');
   let actButton = document.querySelector('#revealPieces');
   let completePuzzle = document.querySelector('.complete-puzzle');
 
   actButton.addEventListener('click', e => {
-    pieces.forEach(piece => {
-      let id = piece.id;
-      let piecer = document.querySelector(`#${id}`);
-      piecer.style.opacity = '1';
-      piecer.style.top = `${puzzlePieces[id].init.t}px`;
-      piecer.style.left = `${puzzlePieces[id].init.l}px`;
-      console.log(id, piecer.style.top, piecer.style.left);
-    })
+    if(!puzzleMode) {
+      actButton.classList.remove('s-txt-white');
+      actButton.classList.add('s-txt-red');
+      actButton.innerHTML = `Exit Puzzle`;
+      puzzleSect.scrollIntoView(true);
+      mainBod.style.overflowY = 'hidden';
+      pieces.forEach(piece => {
+        let id = piece.id;
+        let piecer = document.querySelector(`#${id}`);
+        piecer.style.opacity = '1';
+        piecer.style.top = `${puzzlePieces[id].init.t}px`;
+        piecer.style.left = `${puzzlePieces[id].init.l}px`;
+      })
+
+      puzzleMode = true;
+    } else {
+
+      actButton.classList.remove('.s-txt-red');
+      actButton.classList.add('s-txt-white');
+      actButton.innerHTML = `CLICK HERE <br /> FOR PIECES TO APPEAR`;
+      mainBod.style.overflowY = 'auto';
+      secondSect.scrollIntoView(true);
+      pieces.forEach(piece => {
+        let id = piece.id;
+        let piecer = document.querySelector(`#${id}`);
+        piecer.style.opacity = '0';
+        piecer.style.top = `100%`;
+        piecer.style.left = `0px`;
+      })
+
+      puzzleMode = false;
+    }
   })
 
   pieces.forEach(piece => {
@@ -237,6 +265,12 @@ function confirmPiece(pieceName) {
         pieces.forEach(piece => {
           piece.style.display = 'none';
           completePuzzle.style.display = 'block';
+
+          actButton.classList.remove('s-txt-red');
+          actButton.classList.add('txt-light-blue');
+          actButton.innerHTML = 'Congratulations!!!';
+
+          setTimeout(window.location = '/pages/home.html', 2000);
         })
       }
     } else {
