@@ -93,7 +93,6 @@
     })
     img.addEventListener('touchmove', (e) => {
       if(!dragged){
-        console.log(imgH[0].style.left);
         if(imgH[1].style.left <= 0) {
           let mouseDiff = xmove - e.touches[0].clientX;
           if(Number(imgH[0].style.left.replace('px', '')) == 0 && mouseDiff < 0) {

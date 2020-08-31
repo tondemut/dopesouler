@@ -77,8 +77,6 @@
   display: block;
   overflow-x: hidden;
   overflow-y: hidden;
-  transition: top 1s;
-  transition-timing-function: ease-out;
 }
 .img-holder{
   display: inline-block;
