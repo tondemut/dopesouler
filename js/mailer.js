@@ -4,6 +4,7 @@ let subjectField = document.querySelector('#subject');
 let messageField = document.querySelector('#message');
 let sendBtn = document.querySelector('#sendBtn');
 let reset = true;
+let pass = '';
 
 nameField.addEventListener('blur', e => {
   ValidateField(nameField);
@@ -55,41 +56,46 @@ function sendEmail() {
 
   if(validEmail) {
     if(name && subject && message) {
-
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username : "dopesoulforwarder@gmail.com",
-        Password : "dopeSoulisDope221",
-        To : 'ted.bundymav21@gmail.com',
-        From : "dopesoulforwarder@gmail.com",
-        Subject : `${subject}`,
-        Body : `
-        You received a new message from your contact form. <br />
-        <br />
-        Name: ${name} <br />
-        <br />
-        Email: ${email} <br />
-        <br />
-        Subject: ${subject} <br />
-        <br />
-        Message: ${message}`
-        })
-        .then(
-          message => {
-            
+      fetch('../js/lib/magic.json')
+      .then(key => key.json())
+      .then(msg => {
+        pass = msg.password;
+        
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username : "dopesoulforwarder@gmail.com",
+          Password : pass,
+          To : 'ted.bundymav21@gmail.com',
+          From : "dopesoulforwarder@gmail.com",
+          Subject : `${subject}`,
+          Body : `
+          You received a new message from your contact form. <br />
+          <br />
+          Name: ${name} <br />
+          <br />
+          Email: ${email} <br />
+          <br />
+          Subject: ${subject} <br />
+          <br />
+          Message: ${message}`
+          })
+          .then(
+            message => {
+              
+              sendBtn.classList.remove('s-bg-light-blue');
+              sendBtn.classList.add('s-bg-green');
+              sendBtn.innerHTML = `Message Sent <span><i class="fas fa-check"></i></span>`;
+  
+              reset = false;
+          })
+          .catch(error => {
             sendBtn.classList.remove('s-bg-light-blue');
-            sendBtn.classList.add('s-bg-green');
-            sendBtn.innerHTML = `Message Sent <span><i class="fas fa-check"></i></span>`;
-
+            sendBtn.classList.add('s-bg-red');
+            sendBtn.innerHTML = `Message Not Sent <span><i class="fas fa-times-circle"></i></span>`;
+  
             reset = false;
-        })
-        .catch(error => {
-          sendBtn.classList.remove('s-bg-light-blue');
-          sendBtn.classList.add('s-bg-red');
-          sendBtn.innerHTML = `Message Not Sent <span><i class="fas fa-times-circle"></i></span>`;
-
-          reset = false;
-        })
+          })
+      })
     } else {
       return true;
     }
